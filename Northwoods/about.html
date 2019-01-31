@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>about</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" > 
+		<link rel="stylesheet" href="restaurantStyles.css">
+		<script type="text/JavaScript" src="about.js"></script>
+		<style>	
+			@font-face{
+				font-family: "Arial Black";
+				src: url(fonts/Arial Black.ttf);
+			}
+			h1{
+				font-family: Arial Black, Gadget, sans-serif ;
+			}
+			html{
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			body{
+				background-color: #e2eded ;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #f2f2f2;
+			}
+
+			li{
+				float: left;
+			}
+
+			li a{
+			  display: block;
+			  color: white;
+			  font-family: arial;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+
+			}
+			li a:link {
+			  text-decoration: underline;
+			  color: blue;
+			}
+
+			li a:visited {
+			  color: black;
+			}
+
+			li a:hover {
+			  text-decoration: none;
+			  font-weight: bold;
+			}
+
+			li a:active {
+			  text-decoration: none;
+			color: blue;
+			}
+			
+			label{
+				float: left;
+				text-align: right;
+				width: 50%;
+				padding-right: 50px;
+				margin-top: 12px;
+				clear: left;
+				font-weight:bold;
+				}
+			
+			.form-control {
+				margin-top:12px;
+				width: 200px
+				
+				
+			}
+			
+			form{padding-top:50px;}
+			
+			.answer{margin-top:20px;}
+			.dayOfWeek{margin-top:20px;}		
+		</style>
+		
+	</head>
+	<body>
+	<!--Using <noscript> prompt that the browser does not support JavaScript-->
+	<noscript>Your browser does not support JavaScript!</noscript> 
+	
+		<header>
+			<h1>Northwoods</h1>
+		</header>
+		<!--Navigation-->
+		<div>
+			<ul>
+				<li class="badge badge-pill badge-secondary"><a href="home.html">Home</a></li>
+				<li class="badge badge-pill badge-secondary"><a href="menu.html">Menu</a></li>
+				<li class="badge badge-pill badge-secondary"><a href="about.html">Contact Us</a> </li>
+			</ul>
+		</div>
+		
+		
+		<!--Form asking for users input-->
+     <form form name="myForm" onsubmit="return validateForm()" action="/action_page.php" method="post">
+	 
+      <div class="form-group row">
+		<label for="nameInput" class="col-sm-5 col-form-label">Name:</label>
+		<div class="col-sm-5">
+			<input type="text" id="nameInput" class="form-control" required>
+		</div>
+      </div>
+	  
+	  <div class="form-group row">
+		<label for="emailInput" class="col-sm-5 col-form-label">Email:</label>
+		<div class="col-sm-5">
+			<input type="text" id="emailInput" class="form-control" required>
+		</div>
+      </div>
+	  
+	  <div class="form-group row">
+		<label for="phoneInput" class="col-sm-5 col-form-label">Phone:</label>
+		<div class="col-sm-5">
+			<input type="text" id="phoneInput" class="form-control" required>
+		</div>
+      </div>
+      
+      <div class="form-group row">
+		<label for="service" class="col-sm-5 col-form-label">Reason for Inquiry:</label>
+		<div class="col-sm-5">
+        <select name="service" class="form-control" required>
+          <option value="catering" selected="selected">Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+		</div>
+      </div>
+       
+		
+      <div class="form-group row">
+        <label for="comments" class="col-sm-5 col-form-label">Comments:</label>
+        <div class="col-sm-5">
+		<textarea name="comments" id="comments" class="form-control" required></textarea>
+		</div>
+		</div>
+      <div>
+	   
+        
+		<div class="form-group row">
+        <label for="question" class="col-sm-5 col-form-label">Have you been to the resturant?</label>
+        <div class="col-sm-5">
+        <input type="radio" name="answer" value="no" class="answer"> No
+        <input type="radio" name="answer" value="YES" class="answer">Yes
+		</div>
+      </div>
+      
+      <div class="form-group row">
+        <label for="question" class="col-sm-5 col-form-label">Best days to contact you:</label> 
+             <div class="col-sm-5">
+			 
+			<input type="checkbox" name="dayOfWeek" value="Monday" class="dayOfWeek" >M
+            <input type="checkbox" name="dayOfWeek" value="Tuesday" class="dayOfWeek">T
+            <input type="checkbox" name="dayOfWeek" value="Wednesday" class="dayOfWeek">W
+            <input type="checkbox" name="dayOfWeek" value="Thursday" class="dayOfWeek">Th
+            <input type="checkbox" name="dayOfWeek" value="Friday" class="dayOfWeek">F
+			</div>
+		  </div>      
+    </form> 
+		
+		
+		<!--footer-->
+		<div class="main-container">
+		 <footer>
+			<p>123th St. Savage, MN 55378<br /> (123) 456-7891</p>		
+		</footer>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+	</html>
